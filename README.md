@@ -1,4 +1,4 @@
-# 🚁 DIY Drohne – ESP32-S3 + STM32
+# DIY Drohne – ESP32-S3 + STM32
 
 Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund auf mit günstigen Komponenten gebaut.
 
@@ -8,7 +8,7 @@ Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund 
 
 ## Hardware
 
-### Bereits bestellt (18.03.2026)
+### Bereits bestellt 
 
 | Komponente | Zweck | Preis |
 | --- | --- | --- |
@@ -19,5 +19,19 @@ Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund 
 | SSD1306 OLED 0,96" | Live-Sensordaten anzeigen | 1,29 € |
 | Breadboard 830 Punkte | Prototyping ohne Löten | 1,29 € |
 | Dupont Kabel 20-polig | Verkabelung | 1,09 € |
+| TENSTAR ROBOT (unbekannt) | – | 1,48 € |
+
+## Sonstiges – Werkzeug & Verbrauchsmaterial
+ 
+| Komponente | Zweck | Preis |
+|---|---|---|
+| Schrumpfschlauch-Set 127pcs | Kabelisolierung & Zugentlastung | 1,09 € |
+| Lötzinn 0,8mm 50g (No-clean) | Löten allgemein | 1,69 € |
+| Entlötlitze 1,5mm | Fehler ausbessern beim Löten | 0,89 € |
+| Lötkolben-Reiniger Ball | Lötspitze sauber halten | 0,65 € |
+| Silikon-Löt-/Arbeitsmatte | Hitzeschutz & Arbeitsunterlage | 1,69 € |
+| Widerstand-Set 600pcs (30 Werte) | Allgemeine Schaltungstechnik | 1,69 € |
+| TP4056 Lademodule ×5 (Micro-USB) | LiPo-Akkus laden & schützen | 0,99 € |
+
 
 Drohne unter 250g bauen, um in der EU ohne spezielle Genehmigung fliegen zu dürfen.
