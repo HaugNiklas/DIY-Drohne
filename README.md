@@ -2,13 +2,11 @@
 
 Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund auf mit günstigen Komponenten gebaut.
 
-> **Student-Projekt** | Start: März 2026 | Ziel: Autonome KI-Drohne unter 250g
+> **Student-Projekt** | Start: Ende März 2026 | Ziel: Autonome KI-Drohne unter 250g
 
 ---
 
 ## Hardware
-
-### Bereits bestellt 
 
 | Komponente | Zweck | Preis |
 | --- | --- | --- |
