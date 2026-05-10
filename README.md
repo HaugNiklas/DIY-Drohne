@@ -1,11 +1,55 @@
-# DIY Drohne – ESP32-S3 + STM32
-
+# DIY-Drohne – ESP32-S3 + STM32F405
+ 
 Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund auf mit günstigen Komponenten gebaut.
-
-> **Student-Projekt** | Start: Ende März 2026 | Ziel: Autonome KI-Drohne unter 250g
-
+ 
+> **Student-Projekt** | Start: April 2026 | Ziel: Autonome KI-Drohne unter 250g | Budget: ~150€
+ 
 ---
-
+ 
+## Ziel
+ 
+Ich baue diese Drohne komplett selbst – Hardware, Firmware und KI – um echte Erfahrung in Embedded-Entwicklung (C++/STM32), Regelungstechnik (PID) und KI-Inferenz (Google Coral) zu sammeln. Kein Arduino-Framework, kein fertiger Flight Controller – alles von Grund auf.
+ 
+**Warum unter 250g?** In der EU braucht man ab 250g eine offizielle Drohnenregistrierung. Unter 250g entfällt das.
+ 
+---
+ 
+## Roadmap
+ 
+| Phase | Zeitraum | Ziel | Status |
+|-------|----------|------|--------|
+| **Phase 1** – Sensor & PID | Woche 1–4 | IMU auslesen, PID-Regler schreiben | 🟡 In Arbeit |
+| **Phase 2** – Drohne bauen | Woche 5–10 | Drohne fliegt manuell | ⬜ Offen |
+| **Phase 3** – Eigene Firmware | Woche 11–18 | Custom Firmware auf STM32F405 | ⬜ Offen |
+| **Phase 4** – KI & Autonomie | Woche 19–28 | Objekterkennung, autonomer Flug | ⬜ Offen |
+ 
+---
+ 
+## Projektstruktur
+ 
+```
+DIY-Drohne/
+├── phase1-imu/          # MPU-6050 Klasse, Komplementärfilter, PID
+├── phase2-drohne/       # ESC, Motoren, Betaflight (geplant)
+├── phase3-firmware/     # STM32F405 Custom Firmware, MAVLink (geplant)
+├── phase4-ki/           # YOLO, Google Coral, autonomer Flug (geplant)
+└── README.md
+```
+  
+## Phase 1 – Aktueller Stand
+ 
+**Stack:** ESP32-S3-Zero + PlatformIO + Arduino Framework
+ 
+### Was bisher funktioniert
+- MPU-6050 über I2C auslesen (Accel + Gyro)
+- Komplementärfilter → Roll & Pitch in Echtzeit
+- Saubere C++ Klassenstruktur (`MPU6050.h` / `MPU6050.cpp`)
+### Nächste Schritte
+- [ ] Kalibrierung (Offsets)
+- [ ] NRF24L01 Funkverbindung
+- [ ] PID-Regler implementieren
+- [ ] SSD1306 OLED Anzeige
+---
 ## Hardware
 
 | Komponente | Zweck | Preis |
@@ -32,4 +76,17 @@ Eine selbst gebaute, selbst programmierte Drohne mit KI-Erkennung — von Grund 
 | TP4056 Lademodule ×5 (Micro-USB) | LiPo-Akkus laden & schützen | 0,99 € |
 
 
-Drohne unter 250g bauen, um in der EU ohne spezielle Genehmigung fliegen zu dürfen.
+---
+ 
+## Tech Stack
+ 
+| Bereich | Technologie |
+|---------|-------------|
+| Firmware (Flight Controller) | C++ / STM32 HAL |
+| Firmware (Companion) | C++ / Arduino Framework |
+| IDE | PlatformIO + VS Code |
+| KI-Inferenz | TensorFlow Lite / Google Coral |
+| Telemetrie-Protokoll | MAVLink |
+| Groundstation | Python |
+ 
+---
