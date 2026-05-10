@@ -18,6 +18,8 @@ public:
     float getGyroY() const { return _gy; }
     float getGyroZ() const { return _gz; }
 
+    void calibrate(uint16_t samples = 500);
+
 private:
     // I2C Pins
     uint8_t _sda, _scl;
@@ -37,8 +39,11 @@ private:
     static constexpr uint8_t ADDR = 0x68;
     static constexpr float ACCEL_SCALE = 1.0f / 16384.0f;
     static constexpr float GYRO_SCALE = 1.0f / 131.0f;
-    static constexpr float ALPHA = 0.98f;
+    static constexpr float ALPHA = 0.95f;
 
     // Private Hilfsmethode
     void leseRohdaten();
+
+    float _offAx = 0, _offAy = 0, _offAz = 0;
+    float _offGx = 0, _offGy = 0;
 };
